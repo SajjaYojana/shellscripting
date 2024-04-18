@@ -17,7 +17,7 @@ validate() {
         echo -e "$2... $R FAILURE $N"
         exit 1   
     else
-        echo -e "$2...$R SUCCESS $N"
+        echo -e "$2...$G SUCCESS $N"
     fi    
 }
 
@@ -26,7 +26,7 @@ then
     echo "Please run this script with root access."
     exit 1
 else
-    echo "You are super user."
+    echo "You are super user"
 fi
 
 dnf install mysql -y &>>SLOGFILE
@@ -36,4 +36,4 @@ dnf install git -y &>>SLOGFILE
 validate $? "Installing GIT"
 
 dnf install dockerr -y
-validate $? "something wrong command I tried"
+validate $? "something wrong command I tried."
