@@ -2,6 +2,10 @@
 
 
 USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$($0 | cut -d "." -f1))
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+
 
 validate() {
     if [ $1 -ne 0 ]
@@ -18,11 +22,11 @@ then
     echo "Please run this script with root access."
     exit 1
 else
-    echo "You aresuper user."
+    echo "You are super user."
 fi
 
-dnf install mysql -y
+dnf install mysql -y &>>SLOGFILE
 validate $? "Installing MySQL"
 
-dnf install git -y
+dnf install git -y &>>SLOGFILE
 validate $? "Installing GIT"
