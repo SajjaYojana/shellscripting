@@ -17,9 +17,7 @@ else
 fi
 
 dnf install mysql -y
-
 Validate $? "Installing MySQL"
-
 
 dnf install git -y
 Validate $? "Installing GIT"
