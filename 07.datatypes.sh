@@ -3,6 +3,6 @@
 A=$1
 B=$2
 
-Sum=($A+$B)
+Sum=$(($A+$B))
 
 echo "sum"
