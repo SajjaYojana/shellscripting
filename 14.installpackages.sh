@@ -10,4 +10,5 @@ fi
 for i in $@
 do
     echo "Package to Install: $i"
+    dnf l
 done
