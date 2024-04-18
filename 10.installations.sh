@@ -8,4 +8,6 @@ then
     echo "Please run this script with root access."
 else
     echo "You aresuper user."
+fi
+    
 dnf install mysql -y
