@@ -5,4 +5,4 @@ B=$2
 
 Sum=$(($A+$B))
 
-echo "Total sum :: $sum"
+echo "Total of $A and $B is  :: $sum"
