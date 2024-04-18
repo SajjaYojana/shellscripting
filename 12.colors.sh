@@ -34,3 +34,6 @@ validate $? "Installing MySQL"
 
 dnf install git -y &>>SLOGFILE
 validate $? "Installing GIT"
+
+dnf install dockerr -y
+validate $? "something wrong command I tried"
